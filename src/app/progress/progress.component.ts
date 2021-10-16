@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { UserService } from '../shared/services/user.service';
 import { PeriodicElement } from '../table/table.component';
 
@@ -10,15 +10,11 @@ import { PeriodicElement } from '../table/table.component';
 export class ProgressComponent implements OnInit {
   color: string = "white";
   public userData!: any[];
-
+  @Input() dataSourceIN!: PeriodicElement[];
   constructor(public userService: UserService) {
-    this.userService.fetchData()
-                      .subscribe((data) => {
-                        console.log(data);
-                      })
+   
   }
   ngOnInit(): void {
+    console.log("Progress Comp",this.dataSourceIN)
   }
-
-
 }

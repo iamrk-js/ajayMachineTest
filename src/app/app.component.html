@@ -7,11 +7,11 @@
           User List
         </h3>
         <hr>
-      <app-table></app-table>
+      <app-table ></app-table>
       </mat-card>
     </div>
     <div class="col-sm-3">
-      <app-progress></app-progress>
+      <app-progress [dataSourceIN]="dataSource" *ngIf="dataSource"></app-progress>
 
     </div>
   </div>
