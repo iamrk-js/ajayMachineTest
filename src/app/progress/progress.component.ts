@@ -12,7 +12,7 @@ export class ProgressComponent implements OnInit {
   public userData!: any[];
   @Input() dataSourceIN!: PeriodicElement[];
   constructor(public userService: UserService) {
-   
+        console.log("Testing Conflicts")
   }
   ngOnInit(): void {
     console.log("Progress Comp",this.dataSourceIN)
