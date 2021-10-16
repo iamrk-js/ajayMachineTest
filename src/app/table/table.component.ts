@@ -17,7 +17,7 @@ import { UserSubjectsService } from '../shared/subject/user-subjects.service';
 export class TableComponent implements AfterViewInit, OnInit {
   ELEMENT_DATA: PeriodicElement[] = [];
   displayedColumns: string[] = ['select', 'name', 'email', 'gender', 'address', 'dob'];
-  @Input() dataSource = new MatTableDataSource<PeriodicElement>(this.ELEMENT_DATA);
+  dataSource = new MatTableDataSource<PeriodicElement>(this.ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);
   color: string = "#00a99d"
 
@@ -31,14 +31,21 @@ export class TableComponent implements AfterViewInit, OnInit {
 
   }
   ngOnInit(): void {
-    this.getData()
+    this.getData();
+    this.userInfoService.passVal.subscribe((data:PeriodicElement) => {
+      console.log(data);
+      this.getData();
+    })
   }
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
 
   openDialog(ele: any) {
-    let dialogRef = this.dialog.open(DeleteUserComponent, { restoreFocus: true });
+    let dialogRef = this.dialog.open(DeleteUserComponent, { 
+      restoreFocus: true,
+      data: { pageValue: ele }
+     });
     dialogRef.afterClosed().subscribe(() => this.menuTrigger.focus());
   }
 

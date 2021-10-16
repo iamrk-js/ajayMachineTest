@@ -8,8 +8,4 @@ import { PeriodicElement } from 'src/app/table/table.component';
 export class UserSubjectsService {
   passVal = new Subject<PeriodicElement>();
   constructor() { }
-
-  
-
-
 }

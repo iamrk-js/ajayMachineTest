@@ -18,4 +18,7 @@ export class UserService {
   patchData(id:number,editBody:PeriodicElement){
     return this.http.put(`${this.baseUrl}/${id}/.json`,editBody)
   }
+  deleteDataApi(id:number){
+    return this.http.delete(`${this.baseUrl}/${id}/.json`)
+  }
 }
