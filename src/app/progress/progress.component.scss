@@ -1,0 +1,27 @@
+.header{
+    margin-bottom: 30px;
+}
+mat-progress-bar{
+    height: 10px;
+    border-radius: 10%;
+}
+.progressBar{
+    margin-top: 20px;
+}
+.graphData{
+    margin-top: 50px;
+}
+// ::ng-deep .mat-progress-bar-fill::after {
+//     color: #00a99d;
+// }
+
+// ::ng-deep .mat-progress-bar-buffer {
+//     background: #00a99d;
+// }
+::ng-deep .mat-progress-bar-buffer {
+    background-color: #ffff;
+}
+::ng-deep .mat-progress-bar {
+    border-radius: 2px;
+    background-color: #00a99d;
+}

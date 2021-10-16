@@ -1,0 +1,22 @@
+.container{
+    padding: 0 20px;
+}
+.row{
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px;
+    .col-sm-9{
+        width: 75%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .col-sm-3{
+        width: 25%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+}
+.header{
+    margin-bottom: 35px;
+}
