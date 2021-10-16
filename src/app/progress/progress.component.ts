@@ -12,10 +12,7 @@ export class ProgressComponent implements OnInit {
   public userData!: any[];
 
   constructor(public userService: UserService) {
-    this.userService.fetchData()
-                      .subscribe((data) => {
-                        console.log(data);
-                      })
+        console.log("Testing Conflicts")
   }
   ngOnInit(): void {
   }
